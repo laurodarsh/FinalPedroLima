@@ -19,6 +19,14 @@ namespace projetofinalPedroLima.Forms
 
         private void LblName_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            HomeForm homeForm = new HomeForm();
+            homeForm.Show();
+            this.Hide();
 
         }
     }

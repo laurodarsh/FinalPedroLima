@@ -16,5 +16,17 @@ namespace projetofinalPedroLima.Forms
         {
             InitializeComponent();
         }
+
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            UserProfileAllForm userprofileallForm = new UserProfileAllForm();
+            userprofileallForm.Show();
+            this.Hide();
+        }
+
+        private void pbxSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

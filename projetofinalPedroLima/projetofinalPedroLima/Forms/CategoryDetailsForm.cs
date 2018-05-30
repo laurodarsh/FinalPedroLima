@@ -30,5 +30,30 @@ namespace projetofinalPedroLima.Forms
             categoryallForm.Show();
             this.Hide();
         }
+
+        private void pbxDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxActive_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbxName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblActive_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblname_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
