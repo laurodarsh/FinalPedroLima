@@ -30,12 +30,18 @@
         {
             this.lblName = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblCategory = new System.Windows.Forms.Label();
+            this.lblActive = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbxPrice = new System.Windows.Forms.TextBox();
+            this.cbmCategory = new System.Windows.Forms.ComboBox();
+            this.tbxActive = new System.Windows.Forms.TextBox();
+            this.pbxDelete = new System.Windows.Forms.PictureBox();
+            this.pbxSave = new System.Windows.Forms.PictureBox();
+            this.pbxBack = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -47,7 +53,6 @@
             this.lblName.Size = new System.Drawing.Size(59, 20);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nome :";
-            this.lblName.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblPrice
             // 
@@ -59,25 +64,25 @@
             this.lblPrice.TabIndex = 1;
             this.lblPrice.Text = "Preço :";
             // 
-            // label3
+            // lblCategory
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 142);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.lblCategory.AutoSize = true;
+            this.lblCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.Location = new System.Drawing.Point(36, 142);
+            this.lblCategory.Name = "lblCategory";
+            this.lblCategory.Size = new System.Drawing.Size(86, 20);
+            this.lblCategory.TabIndex = 2;
+            this.lblCategory.Text = "Categoria :";
             // 
-            // label4
+            // lblActive
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(36, 196);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.lblActive.AutoSize = true;
+            this.lblActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblActive.Location = new System.Drawing.Point(36, 196);
+            this.lblActive.Name = "lblActive";
+            this.lblActive.Size = new System.Drawing.Size(52, 20);
+            this.lblActive.TabIndex = 3;
+            this.lblActive.Text = "Ativo :";
             // 
             // tbxName
             // 
@@ -86,43 +91,81 @@
             this.tbxName.Size = new System.Drawing.Size(100, 20);
             this.tbxName.TabIndex = 4;
             // 
-            // textBox2
+            // tbxPrice
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.tbxPrice.Location = new System.Drawing.Point(154, 90);
+            this.tbxPrice.Name = "tbxPrice";
+            this.tbxPrice.Size = new System.Drawing.Size(100, 20);
+            this.tbxPrice.TabIndex = 5;
             // 
-            // comboBox1
+            // cbmCategory
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(154, 141);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 6;
+            this.cbmCategory.FormattingEnabled = true;
+            this.cbmCategory.Location = new System.Drawing.Point(154, 141);
+            this.cbmCategory.Name = "cbmCategory";
+            this.cbmCategory.Size = new System.Drawing.Size(121, 21);
+            this.cbmCategory.TabIndex = 6;
             // 
-            // textBox3
+            // tbxActive
             // 
-            this.textBox3.Location = new System.Drawing.Point(154, 196);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.tbxActive.Location = new System.Drawing.Point(154, 196);
+            this.tbxActive.Name = "tbxActive";
+            this.tbxActive.Size = new System.Drawing.Size(100, 20);
+            this.tbxActive.TabIndex = 7;
+            // 
+            // pbxDelete
+            // 
+            this.pbxDelete.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.delete;
+            this.pbxDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxDelete.Location = new System.Drawing.Point(339, 280);
+            this.pbxDelete.Name = "pbxDelete";
+            this.pbxDelete.Size = new System.Drawing.Size(54, 50);
+            this.pbxDelete.TabIndex = 11;
+            this.pbxDelete.TabStop = false;
+            // 
+            // pbxSave
+            // 
+            this.pbxSave.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.save;
+            this.pbxSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxSave.Location = new System.Drawing.Point(257, 280);
+            this.pbxSave.Name = "pbxSave";
+            this.pbxSave.Size = new System.Drawing.Size(54, 50);
+            this.pbxSave.TabIndex = 9;
+            this.pbxSave.TabStop = false;
+            this.pbxSave.Click += new System.EventHandler(this.pbxSave_Click);
+            // 
+            // pbxBack
+            // 
+            this.pbxBack.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.back;
+            this.pbxBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxBack.Location = new System.Drawing.Point(12, 280);
+            this.pbxBack.Name = "pbxBack";
+            this.pbxBack.Size = new System.Drawing.Size(54, 50);
+            this.pbxBack.TabIndex = 8;
+            this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
             // ProductDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 342);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.pbxDelete);
+            this.Controls.Add(this.pbxSave);
+            this.Controls.Add(this.pbxBack);
+            this.Controls.Add(this.tbxActive);
+            this.Controls.Add(this.cbmCategory);
+            this.Controls.Add(this.tbxPrice);
             this.Controls.Add(this.tbxName);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblActive);
+            this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblName);
             this.Name = "ProductDetailsForm";
             this.Text = "Produto";
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,11 +175,14 @@
 
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCategory;
+        private System.Windows.Forms.Label lblActive;
         private System.Windows.Forms.TextBox tbxName;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbxPrice;
+        private System.Windows.Forms.ComboBox cbmCategory;
+        private System.Windows.Forms.TextBox tbxActive;
+        private System.Windows.Forms.PictureBox pbxDelete;
+        private System.Windows.Forms.PictureBox pbxSave;
+        private System.Windows.Forms.PictureBox pbxBack;
     }
 }

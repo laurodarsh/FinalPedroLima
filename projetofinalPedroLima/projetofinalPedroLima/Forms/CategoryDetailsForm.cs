@@ -17,9 +17,18 @@ namespace projetofinalPedroLima.Forms
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+       
+
+        private void pbxSave_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            CategoryAllForm categoryallForm = new CategoryAllForm();
+            categoryallForm.Show();
+            this.Hide();
         }
     }
 }

@@ -17,9 +17,18 @@ namespace projetofinalPedroLima.Forms
             InitializeComponent();
         }
 
-        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void pbxAdd_Click(object sender, EventArgs e)
         {
+            CategoryDetailsForm categoryDetailsForm = new CategoryDetailsForm();
+            categoryDetailsForm.Show();
+            this.Hide();
+        }
 
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            HomeForm homeForm = new HomeForm();
+            homeForm.Show();
+            this.Hide();
         }
     }
 }

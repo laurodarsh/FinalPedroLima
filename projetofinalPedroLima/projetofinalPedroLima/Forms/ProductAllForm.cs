@@ -21,5 +21,19 @@ namespace projetofinalPedroLima.Forms
         {
 
         }
+
+        private void pbxBack_Click(object sender, EventArgs e)
+        {
+            HomeForm homeForm = new HomeForm();
+            homeForm.Show();
+            this.Hide();
+        }
+
+        private void pbxAdd_Click(object sender, EventArgs e)
+        {
+            ProductDetailsForm productDetailsForm = new ProductDetailsForm();
+            productDetailsForm.Show();
+            this.Hide();
+        }
     }
 }

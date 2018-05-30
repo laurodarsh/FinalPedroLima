@@ -32,16 +32,16 @@
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbxBack = new System.Windows.Forms.PictureBox();
+            this.pbxAdd = new System.Windows.Forms.PictureBox();
+            this.pbxEdit = new System.Windows.Forms.PictureBox();
+            this.pbxDelete = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSearch
@@ -79,55 +79,57 @@
             this.dgvProduct.Size = new System.Drawing.Size(381, 169);
             this.dgvProduct.TabIndex = 3;
             // 
-            // pictureBox2
+            // pbxBack
             // 
-            this.pictureBox2.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.back;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 280);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(54, 50);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.pbxBack.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.back;
+            this.pbxBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxBack.Location = new System.Drawing.Point(12, 280);
+            this.pbxBack.Name = "pbxBack";
+            this.pbxBack.Size = new System.Drawing.Size(54, 50);
+            this.pbxBack.TabIndex = 4;
+            this.pbxBack.TabStop = false;
+            this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
-            // pictureBox3
+            // pbxAdd
             // 
-            this.pictureBox3.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.add;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(219, 280);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(54, 50);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.pbxAdd.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.add;
+            this.pbxAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxAdd.Location = new System.Drawing.Point(219, 280);
+            this.pbxAdd.Name = "pbxAdd";
+            this.pbxAdd.Size = new System.Drawing.Size(54, 50);
+            this.pbxAdd.TabIndex = 5;
+            this.pbxAdd.TabStop = false;
+            this.pbxAdd.Click += new System.EventHandler(this.pbxAdd_Click);
             // 
-            // pictureBox4
+            // pbxEdit
             // 
-            this.pictureBox4.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.edit;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(279, 280);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(54, 50);
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
+            this.pbxEdit.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.edit;
+            this.pbxEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxEdit.Location = new System.Drawing.Point(279, 280);
+            this.pbxEdit.Name = "pbxEdit";
+            this.pbxEdit.Size = new System.Drawing.Size(54, 50);
+            this.pbxEdit.TabIndex = 6;
+            this.pbxEdit.TabStop = false;
             // 
-            // pictureBox5
+            // pbxDelete
             // 
-            this.pictureBox5.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.delete;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(339, 280);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(54, 50);
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
+            this.pbxDelete.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.delete;
+            this.pbxDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxDelete.Location = new System.Drawing.Point(339, 280);
+            this.pbxDelete.Name = "pbxDelete";
+            this.pbxDelete.Size = new System.Drawing.Size(54, 50);
+            this.pbxDelete.TabIndex = 7;
+            this.pbxDelete.TabStop = false;
             // 
             // ProductAllForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 342);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pbxDelete);
+            this.Controls.Add(this.pbxEdit);
+            this.Controls.Add(this.pbxAdd);
+            this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbxSearch);
@@ -137,10 +139,10 @@
             this.Load += new System.EventHandler(this.ProductAllForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,9 +154,9 @@
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvProduct;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pbxBack;
+        private System.Windows.Forms.PictureBox pbxAdd;
+        private System.Windows.Forms.PictureBox pbxEdit;
+        private System.Windows.Forms.PictureBox pbxDelete;
     }
 }
