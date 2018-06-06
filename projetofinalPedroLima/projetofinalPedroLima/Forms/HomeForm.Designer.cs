@@ -50,7 +50,7 @@
             this.pbxLog.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.log;
             this.pbxLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxLog.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxLog.Location = new System.Drawing.Point(158, 208);
+            this.pbxLog.Location = new System.Drawing.Point(158, 229);
             this.pbxLog.Name = "pbxLog";
             this.pbxLog.Size = new System.Drawing.Size(100, 72);
             this.pbxLog.TabIndex = 4;
@@ -154,7 +154,7 @@
             // 
             this.lblLog.AutoSize = true;
             this.lblLog.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblLog.Location = new System.Drawing.Point(193, 283);
+            this.lblLog.Location = new System.Drawing.Point(196, 304);
             this.lblLog.Name = "lblLog";
             this.lblLog.Size = new System.Drawing.Size(25, 13);
             this.lblLog.TabIndex = 9;
@@ -176,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 317);
+            this.ClientSize = new System.Drawing.Size(406, 326);
             this.Controls.Add(this.lblCategory);
             this.Controls.Add(this.lblLog);
             this.Controls.Add(this.lblUser);

@@ -19,7 +19,7 @@ namespace projetofinalPedroLima.Forms
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-             
+
             ProductAllForm productallForm = new ProductAllForm();
             productallForm.Show();
             this.Hide();
@@ -47,37 +47,49 @@ namespace projetofinalPedroLima.Forms
 
         private void pbxCategory_MouseLeave(object sender, EventArgs e)
         {
+            pbxCategory.BackColor = Color.Transparent;
+            lblCategory.Visible = false;
 
         }
 
         private void pbxUserProfile_MouseEnter(object sender, EventArgs e)
         {
+            pbxUserProfile.BackColor = Color.Aquamarine;
+            lblUserProfile.Visible = true;
 
         }
 
         private void pbxUserProfile_MouseLeave(object sender, EventArgs e)
-        {
+        { 
+            pbxUserProfile.BackColor = Color.Transparent;
+            lblUserProfile.Visible = false;
 
         }
 
         private void pbxUser_MouseEnter(object sender, EventArgs e)
         {
+            pbxUser.BackColor = Color.Aquamarine;
+            lblUser.Visible = true;
 
         }
 
         private void pbxUser_MouseLeave(object sender, EventArgs e)
         {
-
+            pbxUser.BackColor = Color.Transparent;
+            lblUser.Visible = false;
         }
 
         private void pbxLog_MouseEnter(object sender, EventArgs e)
         {
+            pbxLog.BackColor = Color.Aquamarine;
+            lblLog.Visible = true;
 
         }
 
         private void pbxLog_MouseLeave(object sender, EventArgs e)
         {
-
+            pbxLog.BackColor = Color.Transparent;
+            lblLog.Visible = false;
         }
 
         private void pbxCategory_Click(object sender, EventArgs e)
