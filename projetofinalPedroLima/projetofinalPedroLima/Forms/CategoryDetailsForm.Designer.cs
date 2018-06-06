@@ -35,6 +35,7 @@
             this.pbxSave = new System.Windows.Forms.PictureBox();
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.cbxActive = new System.Windows.Forms.CheckBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
@@ -75,7 +76,7 @@
             this.pbxDelete.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.delete;
             this.pbxDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxDelete.Location = new System.Drawing.Point(243, 194);
+            this.pbxDelete.Location = new System.Drawing.Point(282, 254);
             this.pbxDelete.Name = "pbxDelete";
             this.pbxDelete.Size = new System.Drawing.Size(77, 50);
             this.pbxDelete.TabIndex = 6;
@@ -87,7 +88,7 @@
             this.pbxSave.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.save;
             this.pbxSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxSave.Location = new System.Drawing.Point(160, 194);
+            this.pbxSave.Location = new System.Drawing.Point(199, 254);
             this.pbxSave.Name = "pbxSave";
             this.pbxSave.Size = new System.Drawing.Size(77, 50);
             this.pbxSave.TabIndex = 5;
@@ -99,7 +100,7 @@
             this.pbxBack.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.back;
             this.pbxBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxBack.Location = new System.Drawing.Point(12, 194);
+            this.pbxBack.Location = new System.Drawing.Point(12, 254);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(77, 50);
             this.pbxBack.TabIndex = 4;
@@ -119,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 279);
+            this.ClientSize = new System.Drawing.Size(371, 316);
             this.Controls.Add(this.cbxActive);
             this.Controls.Add(this.pbxDelete);
             this.Controls.Add(this.pbxSave);
@@ -146,5 +147,6 @@
         private System.Windows.Forms.PictureBox pbxSave;
         private System.Windows.Forms.PictureBox pbxDelete;
         private System.Windows.Forms.CheckBox cbxActive;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

@@ -33,15 +33,15 @@
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.lblActive = new System.Windows.Forms.Label();
-            this.lblname = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.tbxConf = new System.Windows.Forms.TextBox();
             this.lblConf = new System.Windows.Forms.Label();
             this.tbxPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbUser = new System.Windows.Forms.ComboBox();
+            this.lblProfile = new System.Windows.Forms.Label();
+            this.cmbProfile = new System.Windows.Forms.ComboBox();
             this.cbxActive = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
@@ -100,15 +100,15 @@
             this.lblActive.TabIndex = 8;
             this.lblActive.Text = "Ativo :";
             // 
-            // lblname
+            // lblName
             // 
-            this.lblname.AutoSize = true;
-            this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.Location = new System.Drawing.Point(46, 27);
-            this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(59, 20);
-            this.lblname.TabIndex = 7;
-            this.lblname.Text = "Nome :";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(46, 27);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(59, 20);
+            this.lblName.TabIndex = 7;
+            this.lblName.Text = "Nome :";
             // 
             // tbxEmail
             // 
@@ -161,23 +161,23 @@
             this.lblPassword.TabIndex = 18;
             this.lblPassword.Text = "Senha :";
             // 
-            // label4
+            // lblProfile
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 170);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Perfil :";
+            this.lblProfile.AutoSize = true;
+            this.lblProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfile.Location = new System.Drawing.Point(46, 170);
+            this.lblProfile.Name = "lblProfile";
+            this.lblProfile.Size = new System.Drawing.Size(52, 20);
+            this.lblProfile.TabIndex = 20;
+            this.lblProfile.Text = "Perfil :";
             // 
-            // cmbUser
+            // cmbProfile
             // 
-            this.cmbUser.FormattingEnabled = true;
-            this.cmbUser.Location = new System.Drawing.Point(137, 170);
-            this.cmbUser.Name = "cmbUser";
-            this.cmbUser.Size = new System.Drawing.Size(121, 21);
-            this.cmbUser.TabIndex = 21;
+            this.cmbProfile.FormattingEnabled = true;
+            this.cmbProfile.Location = new System.Drawing.Point(137, 170);
+            this.cmbProfile.Name = "cmbProfile";
+            this.cmbProfile.Size = new System.Drawing.Size(121, 21);
+            this.cmbProfile.TabIndex = 21;
             // 
             // cbxActive
             // 
@@ -194,8 +194,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 342);
             this.Controls.Add(this.cbxActive);
-            this.Controls.Add(this.cmbUser);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cmbProfile);
+            this.Controls.Add(this.lblProfile);
             this.Controls.Add(this.tbxPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.tbxConf);
@@ -207,7 +207,7 @@
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.tbxName);
             this.Controls.Add(this.lblActive);
-            this.Controls.Add(this.lblname);
+            this.Controls.Add(this.lblName);
             this.Name = "UserDetailsForm";
             this.Text = "Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
@@ -225,15 +225,15 @@
         private System.Windows.Forms.PictureBox pbxBack;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label lblActive;
-        private System.Windows.Forms.Label lblname;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox tbxConf;
         private System.Windows.Forms.Label lblConf;
         private System.Windows.Forms.TextBox tbxPassword;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbUser;
+        private System.Windows.Forms.Label lblProfile;
+        private System.Windows.Forms.ComboBox cmbProfile;
         private System.Windows.Forms.CheckBox cbxActive;
     }
 }

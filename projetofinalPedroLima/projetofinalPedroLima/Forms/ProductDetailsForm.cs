@@ -17,6 +17,36 @@ namespace projetofinalPedroLima.Forms
             InitializeComponent();
         }
 
+        string name = "";
+        float price = 0;
+        string category = "";
+        bool active = false ;
+
+        void GetData()
+        {
+            name = tbxName.Text;
+            price = float.Parse(tbxPrice.Text);
+            category = cbmCategory.Text;
+            
+            if (cbxActive.Checked)
+            {
+                active = true;
+            }
+            else
+            {
+                active = false;
+            }
+
+        }
+        void CleanData()
+        {
+            tbxName.Text = "";
+            tbxPrice.Text = "";
+            cbmCategory.SelectedIndex = 0;
+            cbxActive.Checked = false;
+
+        }
+        
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
@@ -29,5 +59,7 @@ namespace projetofinalPedroLima.Forms
         {
 
         }
+
+        
     }
 }

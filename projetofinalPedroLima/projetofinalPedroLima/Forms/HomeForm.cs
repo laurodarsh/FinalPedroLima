@@ -41,7 +41,8 @@ namespace projetofinalPedroLima.Forms
 
         private void pbxCategory_MouseEnter(object sender, EventArgs e)
         {
-
+            pbxCategory.BackColor = Color.Aquamarine;
+            lblCategory.Visible = true;
         }
 
         private void pbxCategory_MouseLeave(object sender, EventArgs e)
@@ -115,5 +116,7 @@ namespace projetofinalPedroLima.Forms
             this.Hide();
 
         }
+
+        
     }
 }

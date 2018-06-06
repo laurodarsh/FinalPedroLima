@@ -35,10 +35,10 @@
             this.tbxName = new System.Windows.Forms.TextBox();
             this.tbxPrice = new System.Windows.Forms.TextBox();
             this.cbmCategory = new System.Windows.Forms.ComboBox();
-            this.tbxActive = new System.Windows.Forms.TextBox();
             this.pbxDelete = new System.Windows.Forms.PictureBox();
             this.pbxSave = new System.Windows.Forms.PictureBox();
             this.pbxBack = new System.Windows.Forms.PictureBox();
+            this.cbxActive = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
@@ -106,13 +106,6 @@
             this.cbmCategory.Size = new System.Drawing.Size(121, 21);
             this.cbmCategory.TabIndex = 6;
             // 
-            // tbxActive
-            // 
-            this.tbxActive.Location = new System.Drawing.Point(154, 196);
-            this.tbxActive.Name = "tbxActive";
-            this.tbxActive.Size = new System.Drawing.Size(100, 20);
-            this.tbxActive.TabIndex = 7;
-            // 
             // pbxDelete
             // 
             this.pbxDelete.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.delete;
@@ -148,15 +141,24 @@
             this.pbxBack.TabStop = false;
             this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
             // 
+            // cbxActive
+            // 
+            this.cbxActive.AutoSize = true;
+            this.cbxActive.Location = new System.Drawing.Point(154, 198);
+            this.cbxActive.Name = "cbxActive";
+            this.cbxActive.Size = new System.Drawing.Size(15, 14);
+            this.cbxActive.TabIndex = 12;
+            this.cbxActive.UseVisualStyleBackColor = true;
+            // 
             // ProductDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 342);
+            this.Controls.Add(this.cbxActive);
             this.Controls.Add(this.pbxDelete);
             this.Controls.Add(this.pbxSave);
             this.Controls.Add(this.pbxBack);
-            this.Controls.Add(this.tbxActive);
             this.Controls.Add(this.cbmCategory);
             this.Controls.Add(this.tbxPrice);
             this.Controls.Add(this.tbxName);
@@ -183,9 +185,9 @@
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.TextBox tbxPrice;
         private System.Windows.Forms.ComboBox cbmCategory;
-        private System.Windows.Forms.TextBox tbxActive;
         private System.Windows.Forms.PictureBox pbxDelete;
         private System.Windows.Forms.PictureBox pbxSave;
         private System.Windows.Forms.PictureBox pbxBack;
+        private System.Windows.Forms.CheckBox cbxActive;
     }
 }

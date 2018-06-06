@@ -17,6 +17,34 @@ namespace projetofinalPedroLima.Forms
             InitializeComponent();
         }
 
+        string name = "";
+        bool active = false;
+
+
+        void GetData()
+        {
+            name = tbxName.Text;
+            if (cbxActive.Checked)
+            {
+                active = true;
+            }
+            else
+            {
+                active = false;
+            }
+
+        }
+        void CleanData()
+        {
+
+            tbxName.Text = "";
+            cbxActive.Checked = false;
+
+        }
+
+
+
+
         private void pbxBack_Click(object sender, EventArgs e)
         {
             UserProfileAllForm userprofileallForm = new UserProfileAllForm();
