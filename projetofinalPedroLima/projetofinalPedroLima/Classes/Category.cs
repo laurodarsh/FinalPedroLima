@@ -11,11 +11,19 @@ namespace projetofinalPedroLima.Classes
        private int id = 0;
         private string name = "";
         private bool active;
+        
 
         public Category(string name, bool active)
         {
             this.Name = name;
             this.Active = active;
+        }
+
+        public Category(int id, string name, bool active)
+        {
+            this.id = id;
+            this.name = name;
+            this.active = active;
         }
 
         public int Id

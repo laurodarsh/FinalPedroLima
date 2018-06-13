@@ -92,9 +92,14 @@
             // 
             // dgvUserProfile
             // 
+            this.dgvUserProfile.AllowUserToAddRows = false;
+            this.dgvUserProfile.AllowUserToDeleteRows = false;
             this.dgvUserProfile.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUserProfile.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvUserProfile.Location = new System.Drawing.Point(12, 87);
+            this.dgvUserProfile.MultiSelect = false;
             this.dgvUserProfile.Name = "dgvUserProfile";
+            this.dgvUserProfile.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUserProfile.Size = new System.Drawing.Size(381, 169);
             this.dgvUserProfile.TabIndex = 27;
             // 
@@ -140,6 +145,7 @@
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.lblSearch);
             this.Name = "UserProfileAllForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Perfil de Usuário";
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEdit)).EndInit();

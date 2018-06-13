@@ -209,6 +209,7 @@
             this.Controls.Add(this.lblActive);
             this.Controls.Add(this.lblName);
             this.Name = "UserDetailsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();

@@ -167,6 +167,7 @@
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblName);
             this.Name = "ProductDetailsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produto";
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).EndInit();

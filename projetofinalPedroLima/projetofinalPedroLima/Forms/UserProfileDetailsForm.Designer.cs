@@ -33,7 +33,7 @@
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.lblActive = new System.Windows.Forms.Label();
-            this.lblname = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.cbxActive = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
@@ -45,7 +45,7 @@
             this.pbxDelete.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.delete;
             this.pbxDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxDelete.Location = new System.Drawing.Point(279, 221);
+            this.pbxDelete.Location = new System.Drawing.Point(310, 280);
             this.pbxDelete.Name = "pbxDelete";
             this.pbxDelete.Size = new System.Drawing.Size(77, 50);
             this.pbxDelete.TabIndex = 13;
@@ -56,7 +56,7 @@
             this.pbxSave.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.save;
             this.pbxSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxSave.Location = new System.Drawing.Point(196, 221);
+            this.pbxSave.Location = new System.Drawing.Point(227, 280);
             this.pbxSave.Name = "pbxSave";
             this.pbxSave.Size = new System.Drawing.Size(77, 50);
             this.pbxSave.TabIndex = 12;
@@ -68,7 +68,7 @@
             this.pbxBack.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.back;
             this.pbxBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxBack.Location = new System.Drawing.Point(48, 221);
+            this.pbxBack.Location = new System.Drawing.Point(12, 280);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(77, 50);
             this.pbxBack.TabIndex = 11;
@@ -92,15 +92,15 @@
             this.lblActive.TabIndex = 8;
             this.lblActive.Text = "Ativo :";
             // 
-            // lblname
+            // lblName
             // 
-            this.lblname.AutoSize = true;
-            this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.Location = new System.Drawing.Point(73, 71);
-            this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(59, 20);
-            this.lblname.TabIndex = 7;
-            this.lblname.Text = "Nome :";
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(73, 71);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(59, 20);
+            this.lblName.TabIndex = 7;
+            this.lblName.Text = "Nome :";
             // 
             // cbxActive
             // 
@@ -122,7 +122,7 @@
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.tbxName);
             this.Controls.Add(this.lblActive);
-            this.Controls.Add(this.lblname);
+            this.Controls.Add(this.lblName);
             this.Name = "UserProfileDetailsForm";
             this.Text = "Perfil de usuario";
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();
@@ -140,7 +140,7 @@
         private System.Windows.Forms.PictureBox pbxBack;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label lblActive;
-        private System.Windows.Forms.Label lblname;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.CheckBox cbxActive;
     }
 }

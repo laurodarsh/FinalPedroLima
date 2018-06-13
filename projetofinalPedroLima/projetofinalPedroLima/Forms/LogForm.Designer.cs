@@ -57,9 +57,14 @@
             // 
             // dgvLog
             // 
+            this.dgvLog.AllowUserToAddRows = false;
+            this.dgvLog.AllowUserToDeleteRows = false;
             this.dgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvLog.Location = new System.Drawing.Point(12, 87);
+            this.dgvLog.MultiSelect = false;
             this.dgvLog.Name = "dgvLog";
+            this.dgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLog.Size = new System.Drawing.Size(342, 161);
             this.dgvLog.TabIndex = 3;
             // 
@@ -97,6 +102,7 @@
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.lblSearch);
             this.Name = "LogForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log";
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();

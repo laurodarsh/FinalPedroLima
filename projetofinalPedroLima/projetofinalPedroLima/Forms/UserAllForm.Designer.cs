@@ -110,7 +110,7 @@
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxBack.Location = new System.Drawing.Point(12, 271);
             this.pbxBack.Name = "pbxBack";
-            this.pbxBack.Size = new System.Drawing.Size(54, 50);
+            this.pbxBack.Size = new System.Drawing.Size(70, 59);
             this.pbxBack.TabIndex = 12;
             this.pbxBack.TabStop = false;
             this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
@@ -122,7 +122,7 @@
             this.pbxSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSearch.Location = new System.Drawing.Point(240, 22);
             this.pbxSearch.Name = "pbxSearch";
-            this.pbxSearch.Size = new System.Drawing.Size(33, 28);
+            this.pbxSearch.Size = new System.Drawing.Size(41, 37);
             this.pbxSearch.TabIndex = 10;
             this.pbxSearch.TabStop = false;
             // 
@@ -140,6 +140,7 @@
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.lblSearch);
             this.Name = "UserAllForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).EndInit();

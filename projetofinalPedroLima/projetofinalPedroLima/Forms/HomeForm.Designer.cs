@@ -188,6 +188,7 @@
             this.Controls.Add(this.pbxUserProfile);
             this.Controls.Add(this.pbxProduto);
             this.Name = "HomeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pbxLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCategory)).EndInit();

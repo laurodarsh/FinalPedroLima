@@ -18,6 +18,13 @@ namespace projetofinalPedroLima.Classes
             this.Active = active;
         }
 
+        public UserProfile(int id, string name, bool active)
+        {
+            this.id = id;
+            this.name = name;
+            this.active = active;
+        }
+
         public int Id
         {
             get
