@@ -43,6 +43,7 @@
             this.lblProfile = new System.Windows.Forms.Label();
             this.cmbProfile = new System.Windows.Forms.ComboBox();
             this.cbxActive = new System.Windows.Forms.CheckBox();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
@@ -174,7 +175,7 @@
             // cmbProfile
             // 
             this.cmbProfile.FormattingEnabled = true;
-            this.cmbProfile.Location = new System.Drawing.Point(137, 170);
+            this.cmbProfile.Location = new System.Drawing.Point(137, 165);
             this.cmbProfile.Name = "cmbProfile";
             this.cmbProfile.Size = new System.Drawing.Size(121, 21);
             this.cmbProfile.TabIndex = 21;
@@ -188,11 +189,21 @@
             this.cbxActive.TabIndex = 22;
             this.cbxActive.UseVisualStyleBackColor = true;
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(202, 165);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 13);
+            this.lblId.TabIndex = 23;
+            this.lblId.Visible = false;
+            // 
             // UserDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 342);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.cbxActive);
             this.Controls.Add(this.cmbProfile);
             this.Controls.Add(this.lblProfile);
@@ -236,5 +247,6 @@
         private System.Windows.Forms.Label lblProfile;
         private System.Windows.Forms.ComboBox cmbProfile;
         private System.Windows.Forms.CheckBox cbxActive;
+        private System.Windows.Forms.Label lblId;
     }
 }

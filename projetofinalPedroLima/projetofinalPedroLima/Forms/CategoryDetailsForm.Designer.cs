@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblname = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.lblActive = new System.Windows.Forms.Label();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.pbxDelete = new System.Windows.Forms.PictureBox();
@@ -36,21 +36,22 @@
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.cbxActive = new System.Windows.Forms.CheckBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblname
+            // lblName
             // 
-            this.lblname.AutoSize = true;
-            this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.Location = new System.Drawing.Point(37, 44);
-            this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(59, 20);
-            this.lblname.TabIndex = 0;
-            this.lblname.Text = "Nome :";
-            this.lblname.Click += new System.EventHandler(this.lblname_Click);
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(37, 44);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(59, 20);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Nome :";
+            
             // 
             // lblActive
             // 
@@ -61,7 +62,7 @@
             this.lblActive.Size = new System.Drawing.Size(52, 20);
             this.lblActive.TabIndex = 1;
             this.lblActive.Text = "Ativo :";
-            this.lblActive.Click += new System.EventHandler(this.lblActive_Click);
+            
             // 
             // tbxName
             // 
@@ -69,8 +70,7 @@
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(100, 20);
             this.tbxName.TabIndex = 2;
-            this.tbxName.TextChanged += new System.EventHandler(this.tbxName_TextChanged);
-            // 
+           // 
             // pbxDelete
             // 
             this.pbxDelete.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.delete;
@@ -116,18 +116,28 @@
             this.cbxActive.TabIndex = 7;
             this.cbxActive.UseVisualStyleBackColor = true;
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(41, 162);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 13);
+            this.lblId.TabIndex = 8;
+            this.lblId.Visible = false;
+            // 
             // CategoryDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(371, 316);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.cbxActive);
             this.Controls.Add(this.pbxDelete);
             this.Controls.Add(this.pbxSave);
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.tbxName);
             this.Controls.Add(this.lblActive);
-            this.Controls.Add(this.lblname);
+            this.Controls.Add(this.lblName);
             this.Name = "CategoryDetailsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categoria";
@@ -141,7 +151,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblname;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblActive;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.PictureBox pbxBack;
@@ -149,5 +159,6 @@
         private System.Windows.Forms.PictureBox pbxDelete;
         private System.Windows.Forms.CheckBox cbxActive;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label lblId;
     }
 }

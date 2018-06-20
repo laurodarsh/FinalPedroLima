@@ -30,13 +30,13 @@
         {
             this.lblSearch = new System.Windows.Forms.Label();
             this.tbxSearch = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxSearch = new System.Windows.Forms.PictureBox();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
             this.pbxBack = new System.Windows.Forms.PictureBox();
             this.pbxAdd = new System.Windows.Forms.PictureBox();
             this.pbxEdit = new System.Windows.Forms.PictureBox();
             this.pbxDelete = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).BeginInit();
@@ -61,16 +61,16 @@
             this.tbxSearch.Size = new System.Drawing.Size(100, 20);
             this.tbxSearch.TabIndex = 1;
             // 
-            // pictureBox1
+            // pbxSearch
             // 
-            this.pictureBox1.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.search;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(253, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 39);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pbxSearch.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.search;
+            this.pbxSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxSearch.Location = new System.Drawing.Point(253, 32);
+            this.pbxSearch.Name = "pbxSearch";
+            this.pbxSearch.Size = new System.Drawing.Size(36, 39);
+            this.pbxSearch.TabIndex = 2;
+            this.pbxSearch.TabStop = false;
             // 
             // dgvProduct
             // 
@@ -119,6 +119,7 @@
             this.pbxEdit.Size = new System.Drawing.Size(54, 50);
             this.pbxEdit.TabIndex = 6;
             this.pbxEdit.TabStop = false;
+            this.pbxEdit.Click += new System.EventHandler(this.pbxEdit_Click);
             // 
             // pbxDelete
             // 
@@ -130,6 +131,7 @@
             this.pbxDelete.Size = new System.Drawing.Size(54, 50);
             this.pbxDelete.TabIndex = 7;
             this.pbxDelete.TabStop = false;
+            this.pbxDelete.Click += new System.EventHandler(this.pbxDelete_Click);
             // 
             // ProductAllForm
             // 
@@ -141,14 +143,14 @@
             this.Controls.Add(this.pbxAdd);
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.dgvProduct);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbxSearch);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.lblSearch);
             this.Name = "ProductAllForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produto";
             this.Load += new System.EventHandler(this.ProductAllForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAdd)).EndInit();
@@ -163,7 +165,7 @@
 
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox tbxSearch;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxSearch;
         private System.Windows.Forms.DataGridView dgvProduct;
         private System.Windows.Forms.PictureBox pbxBack;
         private System.Windows.Forms.PictureBox pbxAdd;

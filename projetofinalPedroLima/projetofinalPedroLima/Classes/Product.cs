@@ -22,7 +22,11 @@ namespace projetofinalPedroLima.Classes
             this.Category = category;
         }
 
-        
+        public Product()
+        {
+
+        }
+
         public int Id
         {
             get

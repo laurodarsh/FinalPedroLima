@@ -35,6 +35,7 @@
             this.lblActive = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.cbxActive = new System.Windows.Forms.CheckBox();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBack)).BeginInit();
@@ -50,6 +51,7 @@
             this.pbxDelete.Size = new System.Drawing.Size(77, 50);
             this.pbxDelete.TabIndex = 13;
             this.pbxDelete.TabStop = false;
+            this.pbxDelete.Click += new System.EventHandler(this.pbxDelete_Click);
             // 
             // pbxSave
             // 
@@ -111,11 +113,21 @@
             this.cbxActive.TabIndex = 14;
             this.cbxActive.UseVisualStyleBackColor = true;
             // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(154, 186);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(0, 13);
+            this.lblId.TabIndex = 15;
+            this.lblId.Visible = false;
+            // 
             // UserProfileDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(405, 342);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.cbxActive);
             this.Controls.Add(this.pbxDelete);
             this.Controls.Add(this.pbxSave);
@@ -142,5 +154,6 @@
         private System.Windows.Forms.Label lblActive;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.CheckBox cbxActive;
+        private System.Windows.Forms.Label lblId;
     }
 }

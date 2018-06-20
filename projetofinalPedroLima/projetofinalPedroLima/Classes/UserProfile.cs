@@ -63,5 +63,12 @@ namespace projetofinalPedroLima.Classes
                 active = value;
             }
         }
+
+        public UserProfile()
+        {
+
+        }
+
     }
+    
 }
