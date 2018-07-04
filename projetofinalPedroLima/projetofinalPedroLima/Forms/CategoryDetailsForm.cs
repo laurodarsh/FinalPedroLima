@@ -49,8 +49,8 @@ namespace projetofinalPedroLima.Forms
 
                             category.Id = Int32.Parse(reader["ID"].ToString());
                             category.Name = reader["NAME"].ToString();
-                            category.Active = bool.Parse(reader["ACTIVE"].ToString());     
-                                
+                            category.Active = bool.Parse(reader["ACTIVE"].ToString());
+
                         }
                     }
 
@@ -87,7 +87,7 @@ namespace projetofinalPedroLima.Forms
             {
                 active = false;
             }
-            
+
         }
         void CleanData()
         {
@@ -99,39 +99,77 @@ namespace projetofinalPedroLima.Forms
 
         private void pbxSave_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlConnect = new SqlConnection(connectionString);
-            try
+            if (string.IsNullOrEmpty(lblId.Text))
             {
-                GetData();
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
+                try
+                {
+                    GetData();
 
-                sqlConnect.Open();
-                string sql = "INSERT INTO CATEGORY(NAME, ACTIVE) VALUES (@name, @active)";
+                    sqlConnect.Open();
+                    string sql = "INSERT INTO CATEGORY(NAME, ACTIVE) VALUES (@name, @active)";
 
-                SqlCommand cmd = new SqlCommand(sql, sqlConnect);
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
-                cmd.Parameters.Add(new SqlParameter("@name", name));
-                cmd.Parameters.Add(new SqlParameter("@active", active));
+                    
+                    cmd.Parameters.Add(new SqlParameter("@name", name));
+                    cmd.Parameters.Add(new SqlParameter("@active", active));
 
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Adicionado com sucesso!");
+                    MessageBox.Show("Adicionado com sucesso!");
 
-                CleanData(); 
-                
+                    CleanData();
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show("Erro ao adicionar categoria!" + ex.Message);
+                    CleanData();
+
+                }
+
+                finally
+                {
+
+                    sqlConnect.Close();
+
+                }
             }
-            catch (Exception ex)
+            else
             {
+                SqlConnection sqlConnect = new SqlConnection(connectionString);
 
-                MessageBox.Show("Erro ao adicionar categoria!" + ex.Message);
-                CleanData();
-                
-            }
+                try
+                {
+                    sqlConnect.Open();
+                    string sql = "UPDATE CATEGORY SET NAME = @name, ACTIVE = @active Where ID = @id";
 
-            finally
-            {
 
-                sqlConnect.Close();
+                    SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
+                    cmd.Parameters.Add(new SqlParameter("@id", this.lblId.Text));
+                    cmd.Parameters.Add(new SqlParameter("@name", this.tbxName.Text));
+                    cmd.Parameters.Add(new SqlParameter("@active", this.cbxActive.Checked));
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Alterações salvas com sucesso!");
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show("Erro ao editar esta categoria!" + "\n\n" + Ex.Message);
+                    throw;
+                }
+                finally
+                {
+                    sqlConnect.Close();
+
+                    HomeForm homeform = new HomeForm();
+                    homeform.Show();
+                    this.Hide();
+                }
             }
 
 
@@ -177,7 +215,7 @@ namespace projetofinalPedroLima.Forms
                 }
             }
         }
-        
-       
+
+
     }
 }

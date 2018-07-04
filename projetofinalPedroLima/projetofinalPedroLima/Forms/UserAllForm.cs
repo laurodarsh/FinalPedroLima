@@ -23,6 +23,10 @@ namespace projetofinalPedroLima.Forms
             ResizeDataGridView();
         }
 
+
+
+
+
         private void pbxBack_Click(object sender, EventArgs e)
         {
             HomeForm homeForm = new HomeForm();
@@ -54,7 +58,7 @@ namespace projetofinalPedroLima.Forms
                 SqlDataAdapter sqlDtAdapter = new SqlDataAdapter(cmd);
                 sqlDtAdapter.Fill(dt);
 
-                dgvProduct.DataSource = dt;
+                dgvUser.DataSource = dt;
 
             }
             catch (Exception ex)
@@ -69,18 +73,18 @@ namespace projetofinalPedroLima.Forms
 
         private void ResizeDataGridView()
         {
-            dgvProduct.Columns["ID"].Visible = false;
-            dgvProduct.Columns["NAME"].HeaderText = "Nome";
-            dgvProduct.Columns["PASSWORD"].Visible = false;
-            dgvProduct.Columns["EMAIL"].HeaderText = "Email";
-            dgvProduct.Columns["NAME1"].HeaderText = "Perfil";
-            dgvProduct.Columns["ACTIVE"].HeaderText = "Ativo";
+            dgvUser.Columns["ID"].Visible = false;
+            dgvUser.Columns["NAME"].HeaderText = "Nome";
+            dgvUser.Columns["PASSWORD"].Visible = false;
+            dgvUser.Columns["EMAIL"].HeaderText = "Email";
+            dgvUser.Columns["NAME1"].HeaderText = "Perfil";
+            dgvUser.Columns["ACTIVE"].HeaderText = "Ativo";
 
-            dgvProduct.Columns["ACTIVE"].DisplayIndex = 5;
+            dgvUser.Columns["ACTIVE"].DisplayIndex = 5;
 
-            dgvProduct.Columns["NAME1"].DisplayIndex = 4;
+            dgvUser.Columns["NAME1"].DisplayIndex = 4;
 
-            foreach (DataGridViewColumn col in dgvProduct.Columns)
+            foreach (DataGridViewColumn col in dgvUser.Columns)
             {
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
@@ -90,7 +94,7 @@ namespace projetofinalPedroLima.Forms
         private void pbxDelete_Click(object sender, EventArgs e)
         {
 
-            int idUser = Int32.Parse(dgvProduct.SelectedRows[0].Cells[0].Value.ToString());
+            int idUser = Int32.Parse(dgvUser.SelectedRows[0].Cells[0].Value.ToString());
 
             SqlConnection sqlConnect = new SqlConnection(connectionString);
 
@@ -122,6 +126,18 @@ namespace projetofinalPedroLima.Forms
 
         }
 
+        private void pbxEdit_Click(object sender, EventArgs e)
+        {
+
+            int idUser = Int32.Parse(dgvUser.SelectedRows[0].Cells[0].Value.ToString());
+
+            UserDetailsForm userDetails = new UserDetailsForm(idUser);
+            userDetails.Show();
+
+            this.Close();
+
+
+        }
     }
     }
 
