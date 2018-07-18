@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projetofinalPedroLima.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -102,8 +103,10 @@ namespace projetofinalPedroLima.Forms
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Categoria inativa!");
-                ShowData();
+                Log.SalvarLog("Categoria Excluida", "Exclusão", DateTime.Now);
 
+                ShowData();
+               
             }
             catch (Exception Ex)
             {

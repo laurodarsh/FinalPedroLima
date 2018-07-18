@@ -128,6 +128,7 @@ namespace projetofinalPedroLima.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Adicionado com sucesso!");
+                    Log.SalvarLog("Perfil Adicionado", "Adição", DateTime.Now);
 
                     CleanData();
 
@@ -137,6 +138,8 @@ namespace projetofinalPedroLima.Forms
                 {
 
                     MessageBox.Show("Erro ao adicionar perfil!" + ex.Message);
+
+
                     CleanData();
 
                 }
@@ -166,6 +169,8 @@ namespace projetofinalPedroLima.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Alterações salvas com sucesso!");
+                    Log.SalvarLog("Perfil Editado", "Edição", DateTime.Now);
+
                 }
                 catch (Exception Ex)
                 {
@@ -176,8 +181,8 @@ namespace projetofinalPedroLima.Forms
                 {
                     sqlConnect.Close();
 
-                    HomeForm homeForm = new HomeForm();
-                    homeForm.Show();
+                    UserProfileAllForm userProfileAllForm = new UserProfileAllForm();
+                    userProfileAllForm.Show();
                     this.Hide();
                 }
             }
@@ -204,6 +209,7 @@ namespace projetofinalPedroLima.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Perfil inativo!");
+                    Log.SalvarLog("Categoria Excluida", "Exclusão", DateTime.Now);
                 }
                 catch (Exception Ex)
                 {

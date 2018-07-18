@@ -87,7 +87,7 @@
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxBack.Location = new System.Drawing.Point(12, 272);
             this.pbxBack.Name = "pbxBack";
-            this.pbxBack.Size = new System.Drawing.Size(54, 50);
+            this.pbxBack.Size = new System.Drawing.Size(67, 50);
             this.pbxBack.TabIndex = 28;
             this.pbxBack.TabStop = false;
             this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);

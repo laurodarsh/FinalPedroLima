@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projetofinalPedroLima.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -102,6 +103,8 @@ namespace projetofinalPedroLima.Forms
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Perfil de usuario inativo!");
+                Log.SalvarLog("Perfil Excluido", "Exclusão", DateTime.Now);
+
                 ShowData();
 
             }

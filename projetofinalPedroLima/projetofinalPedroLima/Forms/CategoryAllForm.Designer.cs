@@ -80,7 +80,7 @@
             this.pbxDelete.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.delete;
             this.pbxDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxDelete.Location = new System.Drawing.Point(339, 272);
+            this.pbxDelete.Location = new System.Drawing.Point(339, 280);
             this.pbxDelete.Name = "pbxDelete";
             this.pbxDelete.Size = new System.Drawing.Size(54, 50);
             this.pbxDelete.TabIndex = 23;
@@ -92,7 +92,7 @@
             this.pbxEdit.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.edit;
             this.pbxEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxEdit.Location = new System.Drawing.Point(279, 271);
+            this.pbxEdit.Location = new System.Drawing.Point(279, 280);
             this.pbxEdit.Name = "pbxEdit";
             this.pbxEdit.Size = new System.Drawing.Size(54, 50);
             this.pbxEdit.TabIndex = 22;
@@ -104,7 +104,7 @@
             this.pbxAdd.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.add;
             this.pbxAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxAdd.Location = new System.Drawing.Point(219, 272);
+            this.pbxAdd.Location = new System.Drawing.Point(219, 280);
             this.pbxAdd.Name = "pbxAdd";
             this.pbxAdd.Size = new System.Drawing.Size(54, 50);
             this.pbxAdd.TabIndex = 21;
@@ -116,7 +116,7 @@
             this.pbxBack.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.back;
             this.pbxBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxBack.Location = new System.Drawing.Point(12, 272);
+            this.pbxBack.Location = new System.Drawing.Point(12, 280);
             this.pbxBack.Name = "pbxBack";
             this.pbxBack.Size = new System.Drawing.Size(68, 50);
             this.pbxBack.TabIndex = 20;

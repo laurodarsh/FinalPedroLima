@@ -37,11 +37,11 @@ namespace projetofinalPedroLima.Forms
                 {
                     while (reader.Read())
                     {
-                        cmbProfile.Items.Add(reader["NAME"].ToString());
+                        UserProfile userprofile = new UserProfile(Int32.Parse(reader["ID"].ToString()), reader["NAME"].ToString(), bool.Parse(reader["ACTIVE"].ToString()));
+                        cmbProfile.Items.Add(userprofile);
                     }
                 }
-
-                cmbProfile.SelectedItem = cmbProfile.Items[indexCombo];
+                
             }
             catch (Exception ex)
             {
@@ -52,13 +52,12 @@ namespace projetofinalPedroLima.Forms
                 sqlConnect.Close();
             }
         }
-
-
+        
         public UserDetailsForm(int idUser)
         {
 
             InitializeComponent();
-
+            cmbProfile.DisplayMember = "NAME";
             lblId.Text = idUser.ToString(); //-------
 
             SqlConnection sqlConnect = new SqlConnection(connectionString);
@@ -123,9 +122,7 @@ namespace projetofinalPedroLima.Forms
                 }
             }
         }
-
-
-
+        
         List<UserProfile> profiles = new List<UserProfile>();
 
         string name = "";
@@ -226,7 +223,9 @@ namespace projetofinalPedroLima.Forms
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Adicionado com sucesso!");
-                CleanData();
+                Log.SalvarLog("Usuario Adicionado", "Adição", DateTime.Now);
+
+                    CleanData();
 
             }
             catch (Exception ex)
@@ -259,10 +258,12 @@ namespace projetofinalPedroLima.Forms
                     cmd.Parameters.Add(new SqlParameter("@active", this.cbxActive.Checked));
 
                     cmd.Parameters.Add(new SqlParameter("@fk_userprofile", ((UserProfile)cmbProfile.SelectedItem).Id));
-
+                    cmd.Parameters.Add(new SqlParameter("@id", this.lblId.Text));
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Alterações salvas com sucesso!");
+                    Log.SalvarLog("Produto Editado", "Edição", DateTime.Now);
+
                 }
                 catch (Exception Ex)
                 {
@@ -273,8 +274,8 @@ namespace projetofinalPedroLima.Forms
                 {
                     sqlConnect.Close();
 
-                    HomeForm homeForm = new HomeForm();
-                    homeForm.Show();
+                    UserAllForm userAllForm = new UserAllForm();
+                    userAllForm.Show();
                     this.Hide();
                 }
             }
@@ -300,6 +301,7 @@ namespace projetofinalPedroLima.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Usuario inativo!");
+                    Log.SalvarLog("Usuario Excluido", "Exclusão", DateTime.Now);
                 }
                 catch (Exception Ex)
                 {

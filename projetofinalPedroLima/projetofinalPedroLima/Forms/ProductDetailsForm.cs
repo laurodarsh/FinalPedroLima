@@ -37,11 +37,10 @@ namespace projetofinalPedroLima.Forms
                 {
                     while (reader.Read())
                     {
-                        cbmCategory.Items.Add(reader["NAME"].ToString());
+                        Category c = new Category(Int32.Parse(reader["ID"].ToString()), reader["NAME"].ToString(), bool.Parse(reader["ACTIVE"].ToString()));
+                        cbmCategory.Items.Add(c);
                     }
                 }
-
-                cbmCategory.SelectedItem = cbmCategory.Items[indexCombo];
             }
             catch (Exception ex)
             {
@@ -58,7 +57,7 @@ namespace projetofinalPedroLima.Forms
         {
 
             InitializeComponent();
-
+            cbmCategory.DisplayMember = "NAME";
             lblId.Text = idProduct.ToString(); //-------
 
             SqlConnection sqlConnect = new SqlConnection(connectionString);
@@ -85,7 +84,6 @@ namespace projetofinalPedroLima.Forms
                             product.Name = reader["NAME"].ToString();
                             product.Active = bool.Parse(reader["ACTIVE"].ToString());
                             product.Price = float.Parse(reader["PRICE"].ToString());
-
                             int indexCombo = 0;
                             if (product.Category != null)
                             {
@@ -199,17 +197,20 @@ namespace projetofinalPedroLima.Forms
 
                     //Conectar
                     sqlConnect.Open();
-                    string sql = "INSERT INTO PRODUCT(NAME, PRICE, ACTIVE, FK_PRODUCT) VALUES (@name, @price, @active, @category)";
+                    string sql = "INSERT INTO PRODUCT(NAME, ACTIVE, PRICE, FK_PRODUCT) VALUES (@name, @active, @price, @category)";
 
                     SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
                     cmd.Parameters.Add(new SqlParameter("@name", name));
-                    cmd.Parameters.Add(new SqlParameter("@price", price));
                     cmd.Parameters.Add(new SqlParameter("@active", active));
+                    cmd.Parameters.Add(new SqlParameter("@price", price));
+                    
                     cmd.Parameters.Add(new SqlParameter("@category", ((Category)cbmCategory.SelectedItem).Id));
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Adicionado com sucesso!");
+                    Log.SalvarLog("Produto Adicionado", "Adição", DateTime.Now);
+
                     CleanData();
 
                 }
@@ -217,6 +218,7 @@ namespace projetofinalPedroLima.Forms
                 {
                     //Tratar exceções
                     MessageBox.Show("Erro ao adicionar produto!" + ex.Message);
+
                     CleanData();
                 }
                 finally
@@ -233,19 +235,20 @@ namespace projetofinalPedroLima.Forms
                 try
                 {
                     sqlConnect.Open();
-                    string sql = "UPDATE CATEGORY SET NAME = @name, ACTIVE = @active PRICE = @price, FK_PRODUCT = @fk_product, Where ID = @id ";
+                    string sql = "UPDATE PRODUCT SET NAME = @name, ACTIVE = @active, PRICE = @price, FK_PRODUCT = @fk_product Where ID = @id";
 
                     SqlCommand cmd = new SqlCommand(sql, sqlConnect);
 
                     cmd.Parameters.Add(new SqlParameter("@name", this.tbxName.Text));
                     cmd.Parameters.Add(new SqlParameter("@active", this.cbxActive.Checked));
                     cmd.Parameters.Add(new SqlParameter("@price", this.tbxPrice.Text));
-
                     cmd.Parameters.Add(new SqlParameter("@fk_product", ((Category)cbmCategory.SelectedItem).Id));
+                    cmd.Parameters.Add(new SqlParameter("@id", this.lblId.Text));
 
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Alterações salvas com sucesso!");
+                    Log.SalvarLog("Produto Editado", "Edição", DateTime.Now);
                 }
                 catch (Exception Ex)
                 {
@@ -256,8 +259,8 @@ namespace projetofinalPedroLima.Forms
                 {
                     sqlConnect.Close();
 
-                    HomeForm homeForm = new HomeForm();
-                    homeForm.Show();
+                    ProductAllForm productAllForm = new ProductAllForm();
+                    productAllForm.Show();
                     this.Hide();
                 }
             }
@@ -283,6 +286,7 @@ namespace projetofinalPedroLima.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Produto inativo!");
+                    Log.SalvarLog("Produto Excluido", "Exclusão", DateTime.Now);
                 }
                 catch (Exception Ex)
                 {
@@ -295,5 +299,6 @@ namespace projetofinalPedroLima.Forms
                 }
             }
         }
+        
     }
 }

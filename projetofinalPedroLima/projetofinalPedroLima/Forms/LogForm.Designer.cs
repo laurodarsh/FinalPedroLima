@@ -73,9 +73,9 @@
             this.pbxBack.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.back;
             this.pbxBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxBack.Location = new System.Drawing.Point(12, 277);
+            this.pbxBack.Location = new System.Drawing.Point(12, 274);
             this.pbxBack.Name = "pbxBack";
-            this.pbxBack.Size = new System.Drawing.Size(77, 50);
+            this.pbxBack.Size = new System.Drawing.Size(71, 56);
             this.pbxBack.TabIndex = 4;
             this.pbxBack.TabStop = false;
             this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
@@ -95,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 342);
+            this.ClientSize = new System.Drawing.Size(405, 342);
             this.Controls.Add(this.pbxBack);
             this.Controls.Add(this.dgvLog);
             this.Controls.Add(this.pbxSearch);

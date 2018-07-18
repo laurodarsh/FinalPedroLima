@@ -118,6 +118,7 @@ namespace projetofinalPedroLima.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Adicionado com sucesso!");
+                    Log.SalvarLog("Categoria Adicionada", "Adição", DateTime.Now);
 
                     CleanData();
 
@@ -126,6 +127,7 @@ namespace projetofinalPedroLima.Forms
                 {
 
                     MessageBox.Show("Erro ao adicionar categoria!" + ex.Message);
+                    
                     CleanData();
 
                 }
@@ -156,6 +158,7 @@ namespace projetofinalPedroLima.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Alterações salvas com sucesso!");
+                    Log.SalvarLog("Categoria Editada", "Edição", DateTime.Now);
                 }
                 catch (Exception Ex)
                 {
@@ -166,8 +169,8 @@ namespace projetofinalPedroLima.Forms
                 {
                     sqlConnect.Close();
 
-                    HomeForm homeform = new HomeForm();
-                    homeform.Show();
+                    CategoryAllForm categoryAllForm = new CategoryAllForm();
+                    categoryAllForm.Show();
                     this.Hide();
                 }
             }
@@ -203,6 +206,7 @@ namespace projetofinalPedroLima.Forms
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("categoria inativa!");
+                    Log.SalvarLog("Categoria Excluida", "Exclusão", DateTime.Now);
                 }
                 catch (Exception Ex)
                 {

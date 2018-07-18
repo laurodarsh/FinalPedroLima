@@ -51,7 +51,6 @@
             this.lblName.Size = new System.Drawing.Size(59, 20);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nome :";
-            
             // 
             // lblActive
             // 
@@ -62,7 +61,6 @@
             this.lblActive.Size = new System.Drawing.Size(52, 20);
             this.lblActive.TabIndex = 1;
             this.lblActive.Text = "Ativo :";
-            
             // 
             // tbxName
             // 
@@ -70,13 +68,13 @@
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(100, 20);
             this.tbxName.TabIndex = 2;
-           // 
+            // 
             // pbxDelete
             // 
             this.pbxDelete.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.delete;
             this.pbxDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxDelete.Location = new System.Drawing.Point(282, 254);
+            this.pbxDelete.Location = new System.Drawing.Point(316, 280);
             this.pbxDelete.Name = "pbxDelete";
             this.pbxDelete.Size = new System.Drawing.Size(77, 50);
             this.pbxDelete.TabIndex = 6;
@@ -88,9 +86,9 @@
             this.pbxSave.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.save;
             this.pbxSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxSave.Location = new System.Drawing.Point(199, 254);
+            this.pbxSave.Location = new System.Drawing.Point(237, 280);
             this.pbxSave.Name = "pbxSave";
-            this.pbxSave.Size = new System.Drawing.Size(77, 50);
+            this.pbxSave.Size = new System.Drawing.Size(73, 50);
             this.pbxSave.TabIndex = 5;
             this.pbxSave.TabStop = false;
             this.pbxSave.Click += new System.EventHandler(this.pbxSave_Click);
@@ -100,9 +98,9 @@
             this.pbxBack.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.back;
             this.pbxBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxBack.Location = new System.Drawing.Point(12, 254);
+            this.pbxBack.Location = new System.Drawing.Point(12, 280);
             this.pbxBack.Name = "pbxBack";
-            this.pbxBack.Size = new System.Drawing.Size(77, 50);
+            this.pbxBack.Size = new System.Drawing.Size(68, 50);
             this.pbxBack.TabIndex = 4;
             this.pbxBack.TabStop = false;
             this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);
@@ -110,6 +108,7 @@
             // cbxActive
             // 
             this.cbxActive.AutoSize = true;
+            this.cbxActive.Cursor = System.Windows.Forms.Cursors.Default;
             this.cbxActive.Location = new System.Drawing.Point(121, 104);
             this.cbxActive.Name = "cbxActive";
             this.cbxActive.Size = new System.Drawing.Size(15, 14);
@@ -129,7 +128,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 316);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(405, 342);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.cbxActive);
             this.Controls.Add(this.pbxDelete);

@@ -48,7 +48,7 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSearch.Location = new System.Drawing.Point(44, 38);
+            this.lblSearch.Location = new System.Drawing.Point(54, 24);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(87, 20);
             this.lblSearch.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             // tbxSearch
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(147, 38);
+            this.tbxSearch.Location = new System.Drawing.Point(147, 26);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(100, 20);
             this.tbxSearch.TabIndex = 1;
@@ -66,9 +66,9 @@
             this.pbxSearch.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.search;
             this.pbxSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxSearch.Location = new System.Drawing.Point(253, 32);
+            this.pbxSearch.Location = new System.Drawing.Point(253, 18);
             this.pbxSearch.Name = "pbxSearch";
-            this.pbxSearch.Size = new System.Drawing.Size(36, 39);
+            this.pbxSearch.Size = new System.Drawing.Size(36, 28);
             this.pbxSearch.TabIndex = 2;
             this.pbxSearch.TabStop = false;
             // 
@@ -78,7 +78,7 @@
             this.dgvProduct.AllowUserToDeleteRows = false;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvProduct.Location = new System.Drawing.Point(12, 95);
+            this.dgvProduct.Location = new System.Drawing.Point(12, 86);
             this.dgvProduct.MultiSelect = false;
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -92,7 +92,7 @@
             this.pbxBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxBack.Location = new System.Drawing.Point(12, 280);
             this.pbxBack.Name = "pbxBack";
-            this.pbxBack.Size = new System.Drawing.Size(66, 50);
+            this.pbxBack.Size = new System.Drawing.Size(65, 50);
             this.pbxBack.TabIndex = 4;
             this.pbxBack.TabStop = false;
             this.pbxBack.Click += new System.EventHandler(this.pbxBack_Click);

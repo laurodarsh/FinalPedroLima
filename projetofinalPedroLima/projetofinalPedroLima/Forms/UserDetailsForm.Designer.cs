@@ -133,6 +133,7 @@
             // 
             this.tbxConf.Location = new System.Drawing.Point(189, 137);
             this.tbxConf.Name = "tbxConf";
+            this.tbxConf.PasswordChar = '*';
             this.tbxConf.Size = new System.Drawing.Size(100, 20);
             this.tbxConf.TabIndex = 17;
             // 
@@ -150,6 +151,7 @@
             // 
             this.tbxPassword.Location = new System.Drawing.Point(137, 99);
             this.tbxPassword.Name = "tbxPassword";
+            this.tbxPassword.PasswordChar = '*';
             this.tbxPassword.Size = new System.Drawing.Size(100, 20);
             this.tbxPassword.TabIndex = 19;
             // 
