@@ -60,7 +60,8 @@ namespace projetofinalPedroLima.Forms
             dgvProduct.Columns["ACTIVE"].HeaderText = "Ativo";
             dgvProduct.Columns["PRICE"].HeaderText = "Preço";
             dgvProduct.Columns["NAME1"].HeaderText = "Categoria";
-            
+            dgvProduct.Columns["ACTIVE"].Width = 65;
+
             dgvProduct.Columns["ACTIVE"].DisplayIndex = 4;
             
             dgvProduct.Columns["NAME1"].DisplayIndex = 3;
@@ -79,8 +80,7 @@ namespace projetofinalPedroLima.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            HomeForm homeForm = new HomeForm();
-            homeForm.Show();
+           
             this.Hide();
         }
 
@@ -139,7 +139,18 @@ namespace projetofinalPedroLima.Forms
             this.Close();
 
         }
-        
 
+        private void pbxSearch_Click(object sender, EventArgs e)
+        {
+
+            string optionForm = "ProductForm";
+            string optionString = "name";
+
+            Search search = new Search();
+            dgvProduct.DataSource = search.SearchFilter(connectionString, tbxSearch.Text, optionString, optionForm);
+
+            tbxSearch.Text = "";
+
+        }
     }
 }

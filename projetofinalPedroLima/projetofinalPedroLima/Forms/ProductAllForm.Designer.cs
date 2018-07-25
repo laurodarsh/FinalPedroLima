@@ -71,6 +71,7 @@
             this.pbxSearch.Size = new System.Drawing.Size(36, 28);
             this.pbxSearch.TabIndex = 2;
             this.pbxSearch.TabStop = false;
+            this.pbxSearch.Click += new System.EventHandler(this.pbxSearch_Click);
             // 
             // dgvProduct
             // 

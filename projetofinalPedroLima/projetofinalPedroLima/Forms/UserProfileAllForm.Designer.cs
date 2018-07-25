@@ -115,6 +115,7 @@
             this.pbxSearch.Size = new System.Drawing.Size(33, 28);
             this.pbxSearch.TabIndex = 26;
             this.pbxSearch.TabStop = false;
+            this.pbxSearch.Click += new System.EventHandler(this.pbxSearch_Click);
             // 
             // tbxSearch
             // 

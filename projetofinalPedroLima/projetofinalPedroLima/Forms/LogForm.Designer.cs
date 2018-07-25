@@ -90,6 +90,7 @@
             this.pbxSearch.Size = new System.Drawing.Size(45, 32);
             this.pbxSearch.TabIndex = 2;
             this.pbxSearch.TabStop = false;
+            this.pbxSearch.Click += new System.EventHandler(this.pbxSearch_Click);
             // 
             // LogForm
             // 

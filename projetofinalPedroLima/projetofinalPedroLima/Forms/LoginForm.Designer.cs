@@ -43,7 +43,6 @@
             this.lblName.Size = new System.Drawing.Size(41, 13);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Nome :";
-            this.lblName.Click += new System.EventHandler(this.LblName_Click);
             // 
             // lblPassword
             // 

@@ -101,6 +101,9 @@ namespace projetofinalPedroLima.Classes
                 active = value;
             }
         }
+
+        public UserProfile UserProfile { get; internal set; }
+
         public User()
         {
 

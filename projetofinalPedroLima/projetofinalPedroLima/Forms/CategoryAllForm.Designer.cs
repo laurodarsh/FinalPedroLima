@@ -127,11 +127,13 @@
             // 
             this.pbxSearch.BackgroundImage = global::projetofinalPedroLima.Properties.Resources.search;
             this.pbxSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSearch.Location = new System.Drawing.Point(252, 20);
             this.pbxSearch.Name = "pbxSearch";
             this.pbxSearch.Size = new System.Drawing.Size(33, 28);
             this.pbxSearch.TabIndex = 18;
             this.pbxSearch.TabStop = false;
+            this.pbxSearch.Click += new System.EventHandler(this.pbxSearch_Click);
             // 
             // CategoryAllForm
             // 

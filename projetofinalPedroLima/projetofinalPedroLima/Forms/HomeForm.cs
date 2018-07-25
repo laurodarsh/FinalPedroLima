@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projetofinalPedroLima.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,13 +17,23 @@ namespace projetofinalPedroLima.Forms
         {
             InitializeComponent();
         }
-
+        public HomeForm(User aux)
+        {
+            InitializeComponent();
+            if (aux.UserProfile.Id != 1)
+            {
+                pbxLog.Visible = false;
+                pbxUser.Visible = false;
+                pbxUserProfile.Visible = false;
+                
+            }
+        }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
             ProductAllForm productallForm = new ProductAllForm();
             productallForm.Show();
-            this.Hide();
+           
 
         }
 
@@ -97,7 +108,7 @@ namespace projetofinalPedroLima.Forms
 
             CategoryAllForm categoryallForm = new CategoryAllForm();
             categoryallForm.Show();
-            this.Hide();
+            
 
         }
 
@@ -106,7 +117,7 @@ namespace projetofinalPedroLima.Forms
 
             UserAllForm userallForm = new UserAllForm();
             userallForm.Show();
-            this.Hide();
+            
 
         }
 
@@ -115,7 +126,7 @@ namespace projetofinalPedroLima.Forms
 
             UserProfileAllForm userprofileallForm = new UserProfileAllForm();
             userprofileallForm.Show();
-            this.Hide();
+            
 
         }
 
@@ -125,7 +136,7 @@ namespace projetofinalPedroLima.Forms
 
             LogForm logForm = new LogForm();
             logForm.Show();
-            this.Hide();
+            
 
         }
 

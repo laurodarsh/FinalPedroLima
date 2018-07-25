@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projetofinalPedroLima.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,8 +28,7 @@ namespace projetofinalPedroLima.Forms
 
         private void pbxBack_Click(object sender, EventArgs e)
         {
-            HomeForm homeForm = new HomeForm();
-            homeForm.Show();
+            
             this.Hide();
 
         }
@@ -75,6 +75,17 @@ namespace projetofinalPedroLima.Forms
                 col.HeaderCell.Style.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Pixel);
             }
         }
-    
-}
+
+        private void pbxSearch_Click(object sender, EventArgs e)
+        {
+            string optionForm = "LogForm";
+            string optionString = "description";
+
+            Search search = new Search();
+            dgvLog.DataSource = search.SearchFilter(connectionString, tbxSearch.Text, optionString, optionForm);
+
+            tbxSearch.Text = "";
+
+        }
+    }
 }

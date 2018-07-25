@@ -129,9 +129,10 @@
             this.pbxSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbxSearch.Location = new System.Drawing.Point(240, 22);
             this.pbxSearch.Name = "pbxSearch";
-            this.pbxSearch.Size = new System.Drawing.Size(41, 37);
+            this.pbxSearch.Size = new System.Drawing.Size(33, 27);
             this.pbxSearch.TabIndex = 10;
             this.pbxSearch.TabStop = false;
+            this.pbxSearch.Click += new System.EventHandler(this.pbxSearch_Click);
             // 
             // UserAllForm
             // 
